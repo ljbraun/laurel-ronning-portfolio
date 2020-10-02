@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: owner
+  name: github
+  repo: ljbraun/laurel-ronning-portfolio
+  branch: "owner"
 
 media_folder: static/images
 public_folder: /images
