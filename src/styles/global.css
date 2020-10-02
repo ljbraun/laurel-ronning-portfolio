@@ -8,7 +8,12 @@
     --dark-3: #3c40c6;
 }
 
+html {
+    height: 100%;
+    overflow: auto;
+}
 body {
+    height: 100%;
     margin: 0;
     color: var(--light-1);
 }

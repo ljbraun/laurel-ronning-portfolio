@@ -1,10 +1,24 @@
+.frontpage-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 100%;
+}
+
 .hero-container {
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     justify-content: center;
     align-items: center;
+    min-height: 98vh;
     background-image: url("C:/Users/sleep/OneDrive/Documents/Work/Freelancing/Web Dev/LaurelRonningPortfolio/src/images/pawel-nolbert-62OK9xwVA0c-unsplash.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.portfolio-container {
+    flex: 1 1 auto;
+    min-height: 100vh;
+    background: var(--mid-2);
 }
