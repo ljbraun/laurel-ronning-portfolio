@@ -13,7 +13,6 @@ export default function Home() {
 				</div>
 				<div className={styles.portfolioContainer}>
 					<PortfolioSection />
-          <h1>Hi</h1>
 				</div>
 			</div>
 		</Layout>

@@ -2,6 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-netflify-cms`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -12,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/static/images/`,
       }
     },
     `gatsby-transformer-json`,
