@@ -1,0 +1,20 @@
+[
+	{
+		"facebook": {
+			"name": "Facebook",
+			"link": "https://www.facebook.com/andrewbraun.dev"
+		},
+		"twitter": {
+			"name": "Twitter",
+			"link": "https://www.twitter.com/braunecon"
+		},
+		"linkedin": {
+			"name": "LinkedIn",
+			"link": "https://www.linkedin.com/in/andrewwestonbraun/"
+		},
+		"email": {
+			"name": "Email",
+			"link": "mailto:andrew@andrewbraun.dev"
+		}
+	}
+]

@@ -1,0 +1,10 @@
+.hero-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    background-image: url("C:/Users/sleep/OneDrive/Documents/Work/Freelancing/Web Dev/LaurelRonningPortfolio/src/images/pawel-nolbert-62OK9xwVA0c-unsplash.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

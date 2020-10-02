@@ -1,0 +1,7 @@
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: 0;
+    max-height: 100%;
+}

@@ -1,0 +1,12 @@
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    margin: 0 1rem;
+    padding: 0;
+    font-size: calc(20px + 2vw);
+}
