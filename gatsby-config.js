@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `assets`,
         path: `${__dirname}/static/images/`,
       }
     },
@@ -33,4 +33,8 @@ module.exports = {
       }
     }
   ],
+  siteMetadata: {
+    title: `Laurel Ronning`,
+    description: `International education`,
+  }, 
 }
