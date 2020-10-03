@@ -12,10 +12,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
+        name: `images`,
         path: `${__dirname}/static/images/`,
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio-entries`,
+        path: `${__dirname}/content/portfolio`,
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

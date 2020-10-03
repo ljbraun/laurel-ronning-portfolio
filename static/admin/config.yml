@@ -3,12 +3,13 @@ backend:
   repo: ljbraun/laurel-ronning-portfolio
   branch: main
 
-media_folder: static/images
-public_folder: /images
+media_folder: "static/images"
+public_folder: "/static/images"
 
 collections:
   - name: 'portfolio'
-    label: 'Portfolio'
+    label: 'Portfolio '
+    label_singular: 'Portfolio Item'
     folder: 'content/portfolio'
     create: true
     slug: 'index'
@@ -18,7 +19,9 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Project Title', name: 'title', widget: 'string' }
+      # - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Summary', name: 'summary', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Images', name: 'images', widget: 'image' }
