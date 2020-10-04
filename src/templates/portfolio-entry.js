@@ -9,14 +9,14 @@ export default function PortfolioEntry({ data }) {
 	const { frontmatter, html } = markdownRemark
 
 	return (
-		<React.Fragment>
+		<Layout>
 			<h1>{frontmatter.title}</h1>
 
 			<div
 				className="blog-post-content"
 				dangerouslySetInnerHTML={{ __html: html }}
 			/>
-		</React.Fragment>
+		</Layout>
 	)
 }
 

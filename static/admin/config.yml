@@ -25,4 +25,4 @@ collections:
       - { label: 'Summary', name: 'summary', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Images', name: 'images', widget: 'image' }
+      - { label: 'Images', name: 'images', widget: 'image', required: false }

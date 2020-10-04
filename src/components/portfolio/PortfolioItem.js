@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./portfolio-section.module.css"
+import styles from "./portfolio-item.module.css"
 
 export default function PortfolioSection( props ) {
     const { title, link, summary } = props
@@ -10,10 +10,10 @@ export default function PortfolioSection( props ) {
                 { title }
             </div>
             <div className={styles.itemSummary}>
-                { link }
+                { summary }
             </div>
             <div className={styles.itemLink}>
-                { summary }
+                <a href="{ link }">View Project</a>
             </div>
         </div>
     )
