@@ -27,13 +27,14 @@ export default function PortfolioSection() {
     const items = data.allMarkdownRemark.edges
     
     const portfolioItems = items.map(item => {
-        const { title, summary, link } = item.node.frontmatter
+        const { title, summary, link, slug } = item.node.frontmatter
         const content = item.node.html
         return (
             <PortfolioItem 
                 title={title}
                 summary={summary}
                 link={link}
+                slug={slug}
             />
         )
     })

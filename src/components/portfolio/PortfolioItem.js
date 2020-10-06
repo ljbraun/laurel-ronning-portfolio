@@ -1,19 +1,22 @@
 import React from "react"
+import { Link } from "gatsby"
 import styles from "./portfolio-item.module.css"
 
 export default function PortfolioSection( props ) {
-    const { title, link, summary } = props
+    const { title, link, summary, slug } = props
 
 	return (
         <div className={styles.portfolioItem}>
             <div className={styles.itemTitle}>
-                { title }
+                {title}
             </div>
             <div className={styles.itemSummary}>
-                { summary }
+                {summary}
             </div>
             <div className={styles.itemLink}>
-                <a href="{ link }">View Project</a>
+                <Link to={slug}>
+                    View project
+                </Link>
             </div>
         </div>
     )

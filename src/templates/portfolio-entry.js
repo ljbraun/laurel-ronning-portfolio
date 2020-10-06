@@ -10,12 +10,14 @@ export default function PortfolioEntry({ data }) {
 
 	return (
 		<Layout>
-			<h1>{frontmatter.title}</h1>
+			<div className={styles.portfolioEntryContainer}>
+				<h1>{frontmatter.title}</h1>
 
-			<div
-				className="blog-post-content"
-				dangerouslySetInnerHTML={{ __html: html }}
-			/>
+				<div
+					className={styles.blogPostContent}
+					dangerouslySetInnerHTML={{ __html: html }}
+				/>
+			</div>
 		</Layout>
 	)
 }
