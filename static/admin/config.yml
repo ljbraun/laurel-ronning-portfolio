@@ -28,7 +28,7 @@ collections:
       - { label: "Images", name: "images", widget: "image", required: false }
       - {
           label: "Featured Image",
-          name: "featured-image",
+          name: "featuredImage",
           widget: "image",
           required: false,
           allow_multiple: false,

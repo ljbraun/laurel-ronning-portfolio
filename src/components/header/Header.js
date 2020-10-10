@@ -4,7 +4,6 @@ import debounce from "lodash/debounce"
 import styles from "./header.module.css"
 
 export default function Header() {
-	const [scrolled, setScrolled] = useState(false)
 	const [headerBackground, setHeaderBackground] = useState("transparent")
 
 	const debouncedHeaderBackground = useCallback(

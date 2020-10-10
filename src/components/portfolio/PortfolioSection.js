@@ -16,6 +16,20 @@ export default function PortfolioSection() {
 								slug
 								summary
 								title
+								images {
+									id
+									childImageSharp {
+										id
+										fluid {
+											base64
+											tracedSVG
+											srcWebp
+											srcSetWebp
+											originalImg
+											originalName
+										}
+									}
+								}
 							}
 							html
 						}
@@ -23,25 +37,26 @@ export default function PortfolioSection() {
 				}
 			}
 		`
-    )
-    const items = data.allMarkdownRemark.edges
-    
-    const portfolioItems = items.map(item => {
-        const { title, summary, link, slug } = item.node.frontmatter
-        const content = item.node.html
-        return (
-            <PortfolioItem 
-                title={title}
-                summary={summary}
-                link={link}
-                slug={slug}
-            />
-        )
-    })
+	)
+	const items = data.allMarkdownRemark.edges
+
+	const portfolioItems = items.map(item => {
+		const { title, summary, link, slug } = item.node.frontmatter
+		// const content = item.node.html
+		const image = item.node.frontmatter.images.childImageSharp
+
+		return (
+			<PortfolioItem
+				title={title}
+				summary={summary}
+				link={link}
+				slug={slug}
+				featuredImage={image}
+			/>
+		)
+	})
 
 	return (
-        <div className={styles.portfolioSectionContainer}>
-            { portfolioItems }
-        </div>
-    )
+		<div className={styles.portfolioSectionContainer}>{portfolioItems}</div>
+	)
 }
