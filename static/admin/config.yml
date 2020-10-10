@@ -7,22 +7,29 @@ media_folder: "static/images"
 public_folder: "/static/images"
 
 collections:
-  - name: 'portfolio'
-    label: 'Portfolio '
-    label_singular: 'Portfolio Item'
-    folder: 'content/portfolio'
+  - name: "portfolio"
+    label: "Portfolio "
+    label_singular: "Portfolio Item"
+    folder: "content/portfolio"
     create: true
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
+    slug: "index"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/index"
     editor:
       preview: false
     fields:
-      - { label: 'Project Title', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       # - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Summary', name: 'summary', widget: 'string' }
-      - { label: 'Link', name: 'link', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Images', name: 'images', widget: 'image', required: false }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Images", name: "images", widget: "image", required: false }
+      - {
+          label: "Featured Image",
+          name: "featured-image",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
