@@ -20,12 +20,12 @@ export default function PortfolioSection() {
 									id
 									childImageSharp {
 										id
-										fluid {
+										fixed(width: 250, height: 250) {
 											base64
 											tracedSVG
+											aspectRatio
 											srcWebp
 											srcSetWebp
-											originalImg
 											originalName
 										}
 									}
@@ -43,7 +43,7 @@ export default function PortfolioSection() {
 	const portfolioItems = items.map(item => {
 		const { title, summary, link, slug } = item.node.frontmatter
 		// const content = item.node.html
-		const image = item.node.frontmatter.images.childImageSharp
+		const image = item.node.frontmatter.images.childImageSharp.fixed
 
 		return (
 			<PortfolioItem

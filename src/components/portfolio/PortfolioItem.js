@@ -9,7 +9,7 @@ export default function PortfolioSection(props) {
 	return (
 		<div className={styles.portfolioItem}>
 			<div className={styles.itemImageContainer}>
-				<Img fluid={featuredImage.fluid} alt="" />
+				<Img fixed={featuredImage} alt="" />
 			</div>
 			<div className={styles.itemTitle}>{title}</div>
 			<div className={styles.itemSummary}>{summary}</div>
