@@ -47,9 +47,9 @@ export default function Header() {
 				<Link to="/">{title}</Link>
 			</div>
 			<nav className={styles.headerNav}>
-				<Link className={styles.navListLink} to="/">
+				<a className={styles.navListLink} href="#home">
 					Home
-				</Link>
+				</a>
 				<a className={styles.navListLink} href="#portfolio">
 					Portfolio
 				</a>

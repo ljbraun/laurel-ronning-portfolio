@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<div className={styles.frontpageContainer}>
-				<div className={styles.heroContainer}>
+				<div className={styles.heroContainer} id="home">
 					<div className={styles.heroText}>
 						<h2>Hey there! I'm Laurel.</h2>
 						<p>
