@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import debounce from "lodash/debounce"
 import styles from "./header.module.css"
@@ -20,8 +20,9 @@ export default function Header() {
 		debouncedHeaderBackground()
 	}
 
-	window.addEventListener("scroll", handleScroll)
-
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll)
+	})
 	const data = useStaticQuery(
 		graphql`
 			query metadataQuery {
