@@ -1,19 +1,29 @@
 :root {
-    --light-1: #d2dae2;
-    --mid-1: #575fcf;
-    --mid-2: #ff3f34;
-    --mid-3: #0be881;
-    --dark-1: #1e272e;
-    --dark-2: #485460;
-    --dark-3: #3c40c6;
+	--light-1: #d2dae2;
+	--mid-1: #575fcf;
+	--mid-2: #ff3f34;
+	--mid-3: #0be881;
+	--dark-1: #1e272e;
+	--dark-2: #485460;
+	--dark-3: #3c40c6;
 }
 
 html {
-    height: 100%;
-    overflow: auto;
+	height: 100%;
+	overflow: auto;
+	scroll-behavior: smooth;
 }
 body {
-    height: 100%;
-    margin: 0;
-    color: var(--light-1);
+	height: 100%;
+	margin: 0;
+	color: var(--light-1);
+}
+
+a {
+	text-decoration: none;
+	color: var(--light-1);
+}
+
+a:hover {
+	color: var(--mid-3);
 }

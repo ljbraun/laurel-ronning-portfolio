@@ -43,11 +43,16 @@ export default function Header() {
 			onScroll={handleScroll}
 			style={{ backgroundColor: headerBackground }}
 		>
-			<div className={styles.titleContainer}>{title}</div>
+			<div className={styles.titleContainer}>
+				<Link to="/">{title}</Link>
+			</div>
 			<nav className={styles.headerNav}>
 				<Link className={styles.navListLink} to="/">
 					Home
 				</Link>
+				<a className={styles.navListLink} href="#portfolio">
+					Portfolio
+				</a>
 			</nav>
 		</header>
 	)

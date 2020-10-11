@@ -17,8 +17,16 @@
 	background-size: cover;
 }
 
+.hero-text {
+	min-width: 20rem;
+	max-width: 40rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	background: hsla(0, 0%, 0%, 0.7);
+	text-align: center;
+}
+
 .portfolio-container {
 	flex: 1 1 auto;
-	min-height: 100vh;
 	background: var(--mid-2);
 }

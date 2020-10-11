@@ -9,9 +9,16 @@ export default function Home() {
 		<Layout>
 			<div className={styles.frontpageContainer}>
 				<div className={styles.heroContainer}>
-					<h2>Laurel Ronning</h2>
+					<div className={styles.heroText}>
+						<h2>Hey there! I'm Laurel.</h2>
+						<p>
+							I've been teaching around the world since 2015, and now I'm
+							studying for a masters in education. I'm passionate about student
+							success!
+						</p>
+					</div>
 				</div>
-				<div className={styles.portfolioContainer}>
+				<div className={styles.portfolioContainer} id="portfolio">
 					<PortfolioSection />
 				</div>
 			</div>

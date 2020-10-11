@@ -1,8 +1,18 @@
-.mainHeader {
+.main-header {
 	display: flex;
 	justify-content: space-between;
 	padding: 2rem;
 	min-height: 0;
 	max-height: 100%;
 	transition: background-color 0.3s ease-in-out;
+}
+
+.nav-list-link {
+	border-radius: 10%;
+	padding: 1rem;
+}
+
+.nav-list-link:hover,
+.nav-list-link:focus {
+	background: hsla(0, 0%, 0%, 0.5);
 }

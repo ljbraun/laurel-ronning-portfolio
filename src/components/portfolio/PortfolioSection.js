@@ -20,7 +20,7 @@ export default function PortfolioSection() {
 									id
 									childImageSharp {
 										id
-										fixed {
+										fixed(width: 220) {
 											base64
 											tracedSVG
 											aspectRatio
@@ -58,6 +58,9 @@ export default function PortfolioSection() {
 	})
 
 	return (
-		<div className={styles.portfolioSectionContainer}>{portfolioItems}</div>
+		<div className={styles.portfolioSectionContainer}>
+			<h2>My Work</h2>
+			<div className={styles.portfolioItems}>{portfolioItems}</div>
+		</div>
 	)
 }
