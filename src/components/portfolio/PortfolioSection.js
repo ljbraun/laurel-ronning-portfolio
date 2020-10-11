@@ -20,13 +20,14 @@ export default function PortfolioSection() {
 									id
 									childImageSharp {
 										id
-										fixed(width: 250, height: 250) {
+										fixed {
 											base64
 											tracedSVG
 											aspectRatio
 											srcWebp
 											srcSetWebp
 											originalName
+											...GatsbyImageSharpFixed
 										}
 									}
 								}

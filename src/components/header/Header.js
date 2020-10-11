@@ -23,6 +23,7 @@ export default function Header() {
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 	})
+
 	const data = useStaticQuery(
 		graphql`
 			query metadataQuery {
