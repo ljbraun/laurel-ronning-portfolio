@@ -36,7 +36,7 @@ export default function Header() {
 			}
 		`
 	)
-	const { title, description } = data.site.siteMetadata
+	const { title } = data.site.siteMetadata
 	return (
 		<header
 			className={styles.mainHeader}

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import styles from "./portfolio-item.module.css"
 
 export default function PortfolioSection(props) {
-	const { title, link, summary, slug, featuredImage } = props
+	const { title, summary, slug, featuredImage } = props
 	console.log(featuredImage)
 	return (
 		<Link to={slug}>
