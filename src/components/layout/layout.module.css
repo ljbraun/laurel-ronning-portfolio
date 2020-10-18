@@ -1,28 +1,28 @@
 .page-container {
-    display: flex;
-    flex-direction: column;
-    /* min-height: 100vh; */
-    max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	/* min-height: 100vh; */
+	max-height: 100%;
 }
 
 .header-container {
-    position: fixed;
-    width: 100%;
-    min-height: 0;
-    background: transparent;
+	position: fixed;
+	width: 100%;
+	min-height: 0;
+	background: transparent;
 }
 
 .main-container {
-    display: flex;
-    flex: 1 0 100%;
-    width: 100%;
-    /* min-height: 100%; */
-    background: var(--light-1);
+	display: flex;
+	flex: 1 0 100%;
+	width: 100%;
+	/* min-height: 100%; */
+	background: var(--dark-2);
 }
 
 .footer-container {
-    flex-shrink: 0;
-    width: 100%;
-    margin-top: auto;
-    background: var(--dark-1);
+	flex-shrink: 0;
+	width: 100%;
+	margin-top: auto;
+	background: var(--dark-1);
 }

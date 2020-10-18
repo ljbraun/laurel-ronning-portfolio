@@ -1,4 +1,5 @@
 .portfolio-entry-container {
-    min-height: 87vh;
-    color: black;
+	min-height: 87vh;
+	margin-top: 3rem;
+	color: black;
 }

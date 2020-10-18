@@ -29,6 +29,21 @@ export const pageQuery = graphql`
 			frontmatter {
 				slug
 				title
+				link
+				images {
+					childImageSharp {
+						fluid {
+							base64
+							tracedSVG
+							srcWebp
+							srcSetWebp
+							originalImg
+							originalName
+						}
+					}
+				}
+				date
+				summary
 			}
 		}
 	}
