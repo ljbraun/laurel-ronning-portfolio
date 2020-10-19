@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
 import styles from "./portfolioentry.module.css"
@@ -7,16 +8,22 @@ import styles from "./portfolioentry.module.css"
 export default function PortfolioEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
+	const image = data.markdownRemark.frontmatter.images.childImageSharp.fluid
+	console.log(image)
 
 	return (
 		<Layout>
 			<div className={styles.portfolioEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
-
-				<div
-					className={styles.blogPostContent}
-					dangerouslySetInnerHTML={{ __html: html }}
-				/>
+				<div className={styles.portfolioEntryContentContainer}>
+					<div className={styles.entryImageContainer}>
+						<Img className={styles.entryImage} fluid={image} />
+					</div>
+					<div
+						className={styles.blogPostContent}
+						dangerouslySetInnerHTML={{ __html: html }}
+					/>
+				</div>
 			</div>
 		</Layout>
 	)
@@ -33,6 +40,7 @@ export const pageQuery = graphql`
 				images {
 					childImageSharp {
 						fluid {
+							...GatsbyImageSharpFluid
 							base64
 							tracedSVG
 							srcWebp

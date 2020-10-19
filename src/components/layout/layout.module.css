@@ -10,6 +10,7 @@
 	width: 100%;
 	min-height: 0;
 	background: transparent;
+	z-index: 100;
 }
 
 .main-container {

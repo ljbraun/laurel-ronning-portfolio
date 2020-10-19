@@ -9,10 +9,10 @@ export default function Header() {
 	const debouncedHeaderBackground = useCallback(
 		debounce(
 			x =>
-				window.scrollY > 100
+				window.scrollY > 75
 					? setHeaderBackground("hsla(0, 0%, 0%, 0.7)")
 					: setHeaderBackground("transparent"),
-			50
+			25
 		)
 	)
 
