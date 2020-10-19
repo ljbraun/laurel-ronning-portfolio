@@ -16,8 +16,22 @@ module.exports = {
 				path: `${__dirname}/static/images/`,
 			},
 		},
+		`gatsby-transformer-remark`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxwidth: 1200,
+						},
+					},
+				],
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -25,7 +39,6 @@ module.exports = {
 				path: `${__dirname}/content/portfolio`,
 			},
 		},
-		`gatsby-transformer-remark`,
 		`gatsby-transformer-json`,
 		{
 			resolve: `gatsby-source-filesystem`,
