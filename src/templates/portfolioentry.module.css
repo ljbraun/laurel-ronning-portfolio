@@ -1,5 +1,11 @@
 .portfolio-entry-container {
+	width: 100%;
 	min-height: 87vh;
 	margin-top: 3rem;
+	padding: 1rem;
 	color: black;
+}
+
+.entry-title {
+	text-align: center;
 }

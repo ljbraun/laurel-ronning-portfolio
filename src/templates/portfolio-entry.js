@@ -11,7 +11,7 @@ export default function PortfolioEntry({ data }) {
 	return (
 		<Layout>
 			<div className={styles.portfolioEntryContainer}>
-				<h1>{frontmatter.title}</h1>
+				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
 
 				<div
 					className={styles.blogPostContent}
