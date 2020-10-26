@@ -20,10 +20,19 @@
 .hero-text {
 	min-width: 20rem;
 	max-width: 40rem;
+	margin: 2rem;
 	padding: 1rem;
 	border-radius: 1rem;
 	background: hsla(0, 0%, 0%, 0.7);
 	text-align: center;
+}
+
+.hero-text h2 {
+	font-size: 3rem;
+}
+
+.hero-text p {
+	font-size: 1.5rem;
 }
 
 .portfolio-container {

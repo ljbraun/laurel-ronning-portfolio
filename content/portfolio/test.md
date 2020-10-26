@@ -25,4 +25,4 @@ This is a test post! Here are a few of the things you can do:
 
 ## Add images
 
-![test-image](aug-15-saturn-among-the-stars-nocal-1920x1080.png "test-image")
+![test-image](aug-15-saturn-among-the-stars-nocal-1920x1080.png "Click me ")

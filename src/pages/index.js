@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
+import ProjectFeature from "../components/project-feature/ProjectFeature"
 import PortfolioSection from "../components/portfolio/PortfolioSection"
 import "../styles/global.css"
 import styles from "./index.module.css"
@@ -17,6 +18,9 @@ export default function Home() {
 							success!
 						</p>
 					</div>
+				</div>
+				<div className={styles.featureContainer}>
+					<ProjectFeature />
 				</div>
 				<div className={styles.portfolioContainer} id="portfolio">
 					<PortfolioSection />
