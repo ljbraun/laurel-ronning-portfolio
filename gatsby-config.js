@@ -39,6 +39,13 @@ module.exports = {
 				path: `${__dirname}/content/portfolio`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `sections`,
+				path: `${__dirname}/content/sections`,
+			},
+		},
 		`gatsby-transformer-json`,
 		{
 			resolve: `gatsby-source-filesystem`,

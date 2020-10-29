@@ -15,7 +15,7 @@ collections:
     slug: "index"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}/index"
+    path: "portfolio/{{title}}/index"
     editor:
       preview: false
     fields:
@@ -41,7 +41,7 @@ collections:
     slug: "index"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}/index"
+    path: "section/{{title}}/index"
     editor:
       preview: false
     fields:
@@ -56,3 +56,4 @@ collections:
           allow_multiple: false,
         }
       - { label: "Link", name: "link", widget: "string" }
+            - { label: "Images", name: "images", widget: "image", required: false }
