@@ -58,6 +58,7 @@ export default function PortfolioSection() {
 					Longer description goes here
 				</div>
 			</div>
+			<button className="filled-button">See the full project</button>
 		</div>
 	)
 }

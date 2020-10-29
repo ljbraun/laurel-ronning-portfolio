@@ -33,3 +33,26 @@ collections:
           required: false,
           allow_multiple: false,
         }
+  - name: "sections"
+    label: "Sections "
+    label_singular: "Section"
+    folder: "content/sections"
+    create: true
+    # slug: "index"
+    media_folder: ""
+    public_folder: ""
+    # path: "{{title}}/index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Full description", name: "body", widget: "markdown" }
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
+      - { label: "Link", name: "link", widget: "string" }

@@ -22,14 +22,18 @@
 	text-align: left;
 }
 
-.projectFeatureVitals {
+.project-feature-vitals {
 	grid-area: info;
 }
 
-.projectFeatureImage {
+.project-feature-image {
 	grid-area: image;
 }
 
-.projectFeatureDescription {
+.project-feature-description {
 	grid-area: desc;
+}
+
+.project-feature-vitals h3 {
+	font-size: 1.7rem;
 }
