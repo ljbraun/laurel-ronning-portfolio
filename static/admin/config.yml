@@ -38,10 +38,10 @@ collections:
     label_singular: "Section"
     folder: "content/sections"
     create: true
-    # slug: "index"
+    slug: "index"
     media_folder: ""
     public_folder: ""
-    # path: "{{title}}/index"
+    path: "{{title}}/index"
     editor:
       preview: false
     fields:
