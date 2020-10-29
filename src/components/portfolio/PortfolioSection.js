@@ -7,7 +7,9 @@ export default function PortfolioSection() {
 	const data = useStaticQuery(
 		graphql`
 			query portfolioQuery {
-				allMarkdownRemark {
+				allMarkdownRemark(
+					filter: { frontmatter: { slug: { regex: "/portfolio/" } } }
+				) {
 					edges {
 						node {
 							frontmatter {

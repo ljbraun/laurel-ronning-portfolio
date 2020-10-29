@@ -8,7 +8,9 @@ import styles from "./portfolioentry.module.css"
 export default function PortfolioEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
-	const image = data.markdownRemark.frontmatter.images.childImageSharp.fluid
+	if (data.markdownRemark.frontmatter.images) {
+		const image = data.markdownRemark.frontmatter.images.childImageSharp.fluid
+	}
 	console.log(image)
 
 	return (
