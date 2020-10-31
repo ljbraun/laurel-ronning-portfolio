@@ -1,11 +1,38 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
 import styles from "./portfolioentry.module.css"
 
 export default function PortfolioEntry({ data }) {
+	const queryData = useStaticQuery(graphql`
+		query {
+			markdownRemark(frontmatter: { slug: { regex: "/portfolio/" } }) {
+				html
+				frontmatter {
+					slug
+					title
+					link
+					images {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+								base64
+								tracedSVG
+								srcWebp
+								srcSetWebp
+								originalImg
+								originalName
+							}
+						}
+					}
+					date
+					summary
+				}
+			}
+		}
+	`)
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
 	if (data.markdownRemark.frontmatter.images) {
@@ -31,30 +58,30 @@ export default function PortfolioEntry({ data }) {
 	)
 }
 
-export const pageQuery = graphql`
-	query($slug: String!) {
-		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-			html
-			frontmatter {
-				slug
-				title
-				link
-				images {
-					childImageSharp {
-						fluid {
-							...GatsbyImageSharpFluid
-							base64
-							tracedSVG
-							srcWebp
-							srcSetWebp
-							originalImg
-							originalName
-						}
-					}
-				}
-				date
-				summary
-			}
-		}
-	}
-`
+// export const pageQuery = graphql`
+// 	query($slug: String!) {
+// 		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+// 			html
+// 			frontmatter {
+// 				slug
+// 				title
+// 				link
+// 				images {
+// 					childImageSharp {
+// 						fluid {
+// 							...GatsbyImageSharpFluid
+// 							base64
+// 							tracedSVG
+// 							srcWebp
+// 							srcSetWebp
+// 							originalImg
+// 							originalName
+// 						}
+// 					}
+// 				}
+// 				date
+// 				summary
+// 			}
+// 		}
+// 	}
+// `

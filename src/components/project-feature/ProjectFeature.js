@@ -1,62 +1,56 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styles from "./projectfeature.module.css"
 
 export default function PortfolioSection() {
-	const data = useStaticQuery(
-		graphql`
-			query projectFeatureQuery {
-				allMarkdownRemark {
-					edges {
-						node {
-							frontmatter {
-								date
-								link
-								slug
-								summary
-								title
-								images {
-									id
-									childImageSharp {
-										id
-										fixed(width: 220) {
-											base64
-											tracedSVG
-											aspectRatio
-											srcWebp
-											srcSetWebp
-											originalName
-											...GatsbyImageSharpFixed
-										}
-									}
-								}
+	const queryFeature = useStaticQuery(graphql`
+		query queryFeature {
+			markdownRemark(
+				frontmatter: { slug: { regex: "/sections/featured-project/" } }
+			) {
+				html
+				frontmatter {
+					slug
+					title
+					link
+					images {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+								base64
+								tracedSVG
+								srcWebp
+								srcSetWebp
+								originalImg
+								originalName
 							}
-							html
 						}
 					}
+					date
+					summary
 				}
 			}
-		`
-	)
-	const items = data.allMarkdownRemark.edges
+		}
+	`)
+
+	const { html, frontmatter } = queryFeature.markdownRemark
+
+	const { slug, title, link, images, summary } = frontmatter
+	console.log(frontmatter)
 
 	return (
 		<div className={styles.projectFeatureSectionContainer}>
-			<h2>Featured Research</h2>
+			<h2>Featured Project</h2>
 			<div className={styles.projectFeatureContentContainer}>
 				<div className={styles.projectFeatureVitals}>
-					<h3>Project Name</h3>
-					<p>Project summary</p>
-					<ul>
-						<li>Feature 1</li>
-						<li>Feature 2</li>
-						<li>Feature 3</li>
-					</ul>
+					<h3>{title}</h3>
+					{summary}
 				</div>
-				<div classname={styles.projectFeatureImage}>Image goes here</div>
-				<div className={styles.projectFeatureDescription}>
-					Longer description goes here
+				<div classname={styles.projectFeatureImage}>
+					<Img fluid={images} />
 				</div>
+				<div className={styles.projectFeatureDescription}>{html}</div>
 			</div>
 			<button className="filled-button">See the full project</button>
 		</div>

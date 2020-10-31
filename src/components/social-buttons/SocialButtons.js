@@ -6,11 +6,11 @@ import {
 	SiFacebook as FacebookIcon,
 	SiTwitter as TwitterIcon,
 	SiLinkedin as LinkedInIcon,
-	SiCodewars as CodewarsIcon
+	SiCodewars as CodewarsIcon,
 } from "react-icons/si"
-import { 
-	RiMailSendLine as EmailIcon, 
-	RiStackshareLine as StackShareIcon 
+import {
+	RiMailSendLine as EmailIcon,
+	RiStackshareLine as StackShareIcon,
 } from "react-icons/ri"
 
 import styles from "./social-buttons.module.css"
@@ -87,5 +87,5 @@ export default function SocialButtons() {
 		)
 	})
 
-	return (<div className={styles.socialButtons}>{socialElements}</div>)
+	return <div className={styles.socialButtons}>{socialElements}</div>
 }
