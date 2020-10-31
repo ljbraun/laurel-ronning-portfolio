@@ -6,38 +6,36 @@ import styles from "./projectfeature.module.css"
 export default function PortfolioSection() {
 	const queryFeature = useStaticQuery(graphql`
 		query queryFeature {
-			markdownRemark(
-				frontmatter: { slug: { regex: "/sections/featured-project/" } }
+			allMarkdownRemark(
+				filter: { frontmatter: { slug: { regex: "/sections/" } } }
 			) {
-				html
-				frontmatter {
-					slug
-					title
-					link
-					images {
-						childImageSharp {
-							fluid {
-								...GatsbyImageSharpFluid
-								base64
-								tracedSVG
-								srcWebp
-								srcSetWebp
-								originalImg
-								originalName
+				edges {
+					node {
+						frontmatter {
+							title
+							slug
+							summary
+							link
+							date
+							featuredImage {
+								childImageSharp {
+									fluid {
+										...GatsbyImageSharpFluid
+									}
+								}
 							}
 						}
+						html
 					}
-					date
-					summary
 				}
 			}
 		}
 	`)
 
-	const { html, frontmatter } = queryFeature.markdownRemark
+	const { frontmatter, html } = queryFeature.allMarkdownRemark.edges[0].node
 
-	const { slug, title, link, images, summary } = frontmatter
-	console.log(frontmatter)
+	const { slug, title, link, featuredImage, summary } = frontmatter
+	const image = featuredImage.childImageSharp.fluid
 
 	return (
 		<div className={styles.projectFeatureSectionContainer}>
@@ -48,7 +46,7 @@ export default function PortfolioSection() {
 					{summary}
 				</div>
 				<div classname={styles.projectFeatureImage}>
-					<Img fluid={images} />
+					<Img fluid={image} />
 				</div>
 				<div className={styles.projectFeatureDescription}>{html}</div>
 			</div>

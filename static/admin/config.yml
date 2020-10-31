@@ -56,4 +56,4 @@ collections:
           allow_multiple: false,
         }
       - { label: "Link", name: "link", widget: "string" }
-            - { label: "Images", name: "images", widget: "image", required: false }
+      - { label: "Images", name: "images", widget: "image", required: false }
