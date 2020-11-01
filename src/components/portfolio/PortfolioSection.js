@@ -35,6 +35,7 @@ export default function PortfolioSection() {
 								}
 							}
 							html
+							id
 						}
 					}
 				}
@@ -45,7 +46,7 @@ export default function PortfolioSection() {
 
 	const portfolioItems = items.map(item => {
 		const { title, summary, link, slug } = item.node.frontmatter
-		// const content = item.node.html
+		const { html, id } = item.node
 		const image = item.node.frontmatter.images.childImageSharp.fixed
 
 		return (
@@ -55,6 +56,7 @@ export default function PortfolioSection() {
 				link={link}
 				slug={slug}
 				featuredImage={image}
+				key={id}
 			/>
 		)
 	})

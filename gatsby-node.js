@@ -3,23 +3,32 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	const portfolioEntryTemplate = require.resolve(
 		`./src/templates/portfolio-entry.js`
 	)
-
-	const result = await graphql(`
-		{
-			allMarkdownRemark(filter: {frontmatter: {slug: {regex: "/portfolio/"}}}) (
-				sort: { order: DESC, fields: [frontmatter___date] }
-				limit: 1000
-			) {
-				edges {
-					node {
-						frontmatter {
-							slug
+	// prettier-ignore
+	const result = await graphql(
+		`
+			{
+				allMarkdownRemark(
+					filter: { 
+						frontmatter: {
+							slug: {
+								regex: "/portfolio/"
+							}
+						}
+					}
+					sort: { order: DESC, fields: [frontmatter___date] }
+					limit: 1000
+				) {
+					edges {
+						node {
+							frontmatter {
+								slug
+							}
 						}
 					}
 				}
 			}
-		}
-	`)
+		`
+	)
 
 	if (result.errors) {
 		reporter.panicOnBuild(`Error while running GraphQL query.`)

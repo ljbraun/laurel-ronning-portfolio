@@ -45,7 +45,7 @@ export default function PortfolioSection() {
 					<h3>{title}</h3>
 					{summary}
 				</div>
-				<div classname={styles.projectFeatureImage}>
+				<div className={styles.projectFeatureImage}>
 					<Img fluid={image} />
 				</div>
 				<div className={styles.projectFeatureDescription}>{html}</div>
