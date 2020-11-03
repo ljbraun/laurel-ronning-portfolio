@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import ReactMarkdown from "react-markdown"
 import styles from "./projectfeature.module.css"
 
 export default function PortfolioSection() {
@@ -43,7 +44,7 @@ export default function PortfolioSection() {
 			<div className={styles.projectFeatureContentContainer}>
 				<div className={styles.projectFeatureVitals}>
 					<h2>{title}</h2>
-					{summary}
+					<ReactMarkdown source={summary} />
 				</div>
 				<div className={styles.projectFeatureImageContainer}>
 					<Img fluid={image} />

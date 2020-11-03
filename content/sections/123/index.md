@@ -6,7 +6,7 @@ summary: |-
   * Cats are cute
   * Cats is smart
   * Cats make meow noise
-  * Cats understandme
+  * Cats understand me
 featuredImage: aug-16-psst-its-camping-time-nocal-1920x1080.png
 link: https://laurelronning.com
 slug: /sections/featured-project/

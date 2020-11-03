@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
 import styles from "./portfolioentry.module.css"
