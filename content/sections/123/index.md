@@ -1,5 +1,5 @@
 ---
-title: Featured Project
+title: Featured Project Title Here
 summary: |-
   This is my featured project summary!
 
