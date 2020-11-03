@@ -54,7 +54,11 @@ export default function PortfolioSection() {
 					dangerouslySetInnerHTML={{ __html: html }}
 				></div>
 			</div>
-			<button className="filled-button">See the full project</button>
+			<div className={styles.projectButton}>
+				<a className="filled-button" href={link}>
+					See the full project
+				</a>
+			</div>
 		</div>
 	)
 }

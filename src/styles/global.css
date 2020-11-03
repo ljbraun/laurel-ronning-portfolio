@@ -10,6 +10,10 @@
 	--dark-3: hsl(238, 55%, 51%);
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	height: 100%;
 	overflow: auto;
@@ -46,6 +50,7 @@ h2 {
 	border: 0;
 	border-radius: 0.8rem;
 	background: var(--mid-3);
+	color: var(--dark-1);
 	transition: filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
