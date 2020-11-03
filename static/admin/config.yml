@@ -46,7 +46,7 @@ collections:
       preview: false
     fields:
       - { label: "Project Title", name: "title", widget: "string" }
-      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "markdown" }
       - { label: "Full description", name: "body", widget: "markdown" }
       - {
           label: "Featured Image",

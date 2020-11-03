@@ -42,13 +42,16 @@ export default function PortfolioSection() {
 			<h2>Featured Project</h2>
 			<div className={styles.projectFeatureContentContainer}>
 				<div className={styles.projectFeatureVitals}>
-					<h3>{title}</h3>
+					<h2>{title}</h2>
 					{summary}
 				</div>
-				<div className={styles.projectFeatureImage}>
+				<div className={styles.projectFeatureImageContainer}>
 					<Img fluid={image} />
 				</div>
-				<div className={styles.projectFeatureDescription}>{html}</div>
+				<div
+					className={styles.projectFeatureDescription}
+					dangerouslySetInnerHTML={{ __html: html }}
+				></div>
 			</div>
 			<button className="filled-button">See the full project</button>
 		</div>

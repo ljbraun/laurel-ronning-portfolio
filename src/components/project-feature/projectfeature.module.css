@@ -13,11 +13,11 @@
 .project-feature-content-container {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	grid-template-rows: 1fr 1fr;
+	/* grid-template-rows: 1fr 1fr; */
 	grid-template-areas:
 		"info image"
 		"desc desc";
-	padding: 2rem;
+	padding: 1rem;
 	background: var(--dark-1);
 	text-align: left;
 }
@@ -26,8 +26,14 @@
 	grid-area: info;
 }
 
-.project-feature-image {
+.project-feature-vitals h2 {
+	grid-area: info;
+	text-align: center;
+}
+
+.project-feature-image-container {
 	grid-area: image;
+	min-width: 15rem;
 }
 
 .project-feature-description {
@@ -36,4 +42,15 @@
 
 .project-feature-vitals h3 {
 	font-size: 1.7rem;
+}
+
+/* Media queries */
+@media (max-width: 700px) {
+	.project-feature-content-container {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"info"
+			"image"
+			"desc";
+	}
 }
