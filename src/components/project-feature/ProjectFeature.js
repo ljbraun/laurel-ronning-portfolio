@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import ReactMarkdown from "react-markdown"
 import styles from "./projectfeature.module.css"
@@ -40,12 +40,13 @@ export default function PortfolioSection() {
 
 	return (
 		<div className={styles.projectFeatureSectionContainer}>
-			<h2>Featured Project</h2>
 			<div className={styles.projectFeatureContentContainer}>
-				<div className={styles.projectFeatureVitals}>
-					<h2>{title}</h2>
+				<h2 className={styles.projectFeatureTitle}>{title}</h2>
+
+				<div className={styles.projectFeatureSummary}>
 					<ReactMarkdown source={summary} />
 				</div>
+
 				<div className={styles.projectFeatureImageContainer}>
 					<Img fluid={image} />
 				</div>
@@ -55,9 +56,9 @@ export default function PortfolioSection() {
 				></div>
 			</div>
 			<div className={styles.projectButton}>
-				<a className="filled-button" href={link}>
+				<Link className={styles.filledButton} to={slug}>
 					See the full project
-				</a>
+				</Link>
 			</div>
 		</div>
 	)

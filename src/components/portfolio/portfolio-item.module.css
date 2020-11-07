@@ -1,8 +1,11 @@
 .portfolio-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: relative;
-	width: 17rem;
-	height: 20rem;
-	padding: 1rem;
+	flex: 1 1 25%;
+	min-width: 15rem;
+	max-width: 25rem;
 	margin: 1.2vw;
 	border-radius: 1rem;
 	background: var(--dark-1);
@@ -10,9 +13,19 @@
 	transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.portfolio-item a:hover {
 	background: var(--mid-1);
+	color: white;
 	opacity: 0.9;
+}
+
+.portfolio-item a {
+	border-radius: 1rem;
+}
+
+.item-text-container {
+	padding: 1rem;
 }
 
 .item-title {
@@ -24,7 +37,9 @@
 	text-align: center;
 	font-size: 0.9rem;
 }
+
 .item-image-container {
-	/* display: flex; */
-	padding: 1rem;
+	width: 100%;
+	border-radius: 1rem 1rem 0 0;
+	overflow: hidden;
 }

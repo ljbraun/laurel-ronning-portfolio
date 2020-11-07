@@ -5,16 +5,18 @@ import styles from "./portfolio-item.module.css"
 
 export default function PortfolioSection(props) {
 	const { title, summary, slug, featuredImage } = props
-	// console.log(featuredImage)
+	console.log(featuredImage)
 	return (
-		<Link to={slug}>
-			<div className={styles.portfolioItem}>
+		<div className={styles.portfolioItem}>
+			<Link to={slug}>
 				<div className={styles.itemImageContainer}>
-					<Img fixed={featuredImage} alt="" />
+					<Img fluid={featuredImage} alt="" />
 				</div>
-				<div className={styles.itemTitle}>{title}</div>
-				<div className={styles.itemSummary}>{summary}</div>
-			</div>
-		</Link>
+				<div className={styles.itemTextContainer}>
+					<div className={styles.itemTitle}>{title}</div>
+					<div className={styles.itemSummary}>{summary}</div>
+				</div>
+			</Link>
+		</div>
 	)
 }

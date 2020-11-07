@@ -15,6 +15,7 @@
 	grid-template-columns: 2fr 2fr;
 	/* grid-template-rows: 1fr 1fr; */
 	grid-template-areas:
+		"title image"
 		"info image"
 		"desc desc";
 	justify-items: center;
@@ -23,13 +24,16 @@
 	text-align: left;
 }
 
-.project-feature-vitals {
+.project-feature-summary {
 	grid-area: info;
-	padding: 1rem;
+	padding: 0 1rem;
+	width: 90%;
+	height: 100%;
+	border-bottom: 2px solid var(--mid-3);
 }
 
-.project-feature-vitals h2 {
-	grid-area: info;
+.project-feature-title {
+	grid-area: title;
 	text-align: center;
 }
 
@@ -45,7 +49,7 @@
 	grid-area: desc;
 }
 
-.project-feature-vitals h3 {
+.project-feature-summary h3 {
 	font-size: 1.7rem;
 }
 
@@ -53,6 +57,15 @@
 	margin: 1rem 0 2rem 0;
 }
 
+.project-button a {
+	margin: 1rem;
+	padding: 1rem;
+	border: 0;
+	border-radius: 0.8rem;
+	background: var(--mid-3);
+	color: var(--dark-1);
+	transition: filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
 .project-button a:hover {
 	color: var(--dark-3);
 	filter: brightness(0.9);
@@ -63,8 +76,12 @@
 	.project-feature-content-container {
 		grid-template-columns: 1fr;
 		grid-template-areas:
-			"info"
+			"title"
 			"image"
+			"info"
 			"desc";
+	}
+	.project-feature-title {
+		grid-area: title;
 	}
 }
