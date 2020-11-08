@@ -11,7 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 					filter: { 
 						frontmatter: {
 							slug: {
-								regex: "/portfolio/"
+								regex: "/portfolio|section/"
 							}
 						}
 					}

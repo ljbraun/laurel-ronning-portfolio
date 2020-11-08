@@ -50,6 +50,9 @@ export default function Header() {
 				<a className={styles.navListLink} href="/#home">
 					Home
 				</a>
+				<a className={styles.navListLink} href="#feature">
+					Master's Project
+				</a>
 				<a className={styles.navListLink} href="#portfolio">
 					Portfolio
 				</a>
