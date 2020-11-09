@@ -25,20 +25,19 @@
 	transition: transform 0.3s ease-in-out;
 }
 
+.hamburger-icon-container svg > * {
+	pointer-events: none;
+}
+
 .hamburger-icon-container:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-}
-
-.toggle-menu {
-	transform: translateX(-100%);
 }
 
 .main-container {
 	display: flex;
 	flex: 1 0 100%;
 	width: 100%;
-	/* min-height: 100%; */
 	background: var(--dark-2);
 }
 
@@ -57,5 +56,8 @@
 	}
 	.hamburger-icon-container {
 		display: block;
+	}
+	.toggle-menu {
+		transform: translateX(-100%);
 	}
 }
