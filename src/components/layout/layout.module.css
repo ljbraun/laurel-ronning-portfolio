@@ -7,10 +7,31 @@
 
 .header-container {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	min-height: 0;
 	background: transparent;
 	z-index: 100;
+	transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-icon-container {
+	display: none;
+	position: fixed;
+	font-size: 2.5rem;
+	top: 5px;
+	left: 5px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-icon-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.toggle-menu {
+	transform: translateX(-100%);
 }
 
 .main-container {
@@ -26,4 +47,15 @@
 	width: 100%;
 	margin-top: auto;
 	background: var(--dark-1);
+}
+
+@media (max-width: 600px) {
+	.header-container {
+		bottom: 0;
+		background: hsla(0, 0%, 0%, 0.85);
+		width: 80%;
+	}
+	.hamburger-icon-container {
+		display: block;
+	}
 }

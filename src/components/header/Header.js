@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useCallback } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { AiOutlineCloseCircle as CloseIcon } from "react-icons/ai"
 import debounce from "lodash/debounce"
 import styles from "./header.module.css"
 
-export default function Header() {
+export default function Header(props) {
 	const [headerBackground, setHeaderBackground] = useState("transparent")
+	const { menuIsOpen, setMenuIsOpen } = props
 
 	const debouncedHeaderBackground = useCallback(
 		debounce(
@@ -43,6 +45,9 @@ export default function Header() {
 			onScroll={handleScroll}
 			style={{ backgroundColor: headerBackground }}
 		>
+			<div className={styles.closeIconContainer}>
+				<CloseIcon onClick={() => setMenuIsOpen(false)} />
+			</div>
 			<div className={styles.titleContainer}>
 				<Link to="/">{title}</Link>
 			</div>
