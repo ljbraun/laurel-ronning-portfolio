@@ -3,6 +3,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	const portfolioEntryTemplate = require.resolve(
 		`./src/templates/portfolio-entry.js`
 	)
+	const sectionEntryTemplate = require.resolve(
+		`./src/templates/project-feature.js`
+	)
 	// prettier-ignore
 	const result = await graphql(
 		`
@@ -36,12 +39,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	}
 
 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-		createPage({
-			path: node.frontmatter.slug,
-			component: portfolioEntryTemplate,
-			context: {
-				slug: node.frontmatter.slug,
-			},
-		})
+		if (node.frontmatter.slug.includes("portfolio")) {
+			createPage({
+				path: node.frontmatter.slug,
+				component: portfolioEntryTemplate,
+				context: {
+					slug: node.frontmatter.slug,
+				},
+			})
+		} else if (node.frontmatter.slug.includes("sections")) {
+			createPage({
+				path: node.frontmatter.slug,
+				component: sectionEntryTemplate,
+				context: {
+					slug: node.frontmatter.slug,
+				},
+			})
+		}
 	})
 }

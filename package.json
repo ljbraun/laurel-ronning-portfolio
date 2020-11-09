@@ -13,11 +13,13 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "resolutions": {},
   "dependencies": {
     "gatsby": "^2.25.3",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-netlify-cms": "^4.3.17",
     "gatsby-plugin-sharp": "^2.7.1",
+    "gatsby-react-router-scroll": "^3.0.15",
     "gatsby-remark-images": "^3.4.1",
     "gatsby-source-filesystem": "^2.4.2",
     "gatsby-transformer-json": "^2.4.15",
@@ -25,6 +27,7 @@
     "gatsby-transformer-sharp": "^2.5.21",
     "lodash": "^4.17.20",
     "netlify-cms-app": "^2.13.2",
+    "patch-package": "^6.2.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",

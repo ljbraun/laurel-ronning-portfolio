@@ -9,7 +9,7 @@ import styles from "./portfolioentry.module.css"
 export default function PortfolioEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
-	const { slug, title, link } = frontmatter
+	// const { slug, title, link } = frontmatter
 	const image = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
