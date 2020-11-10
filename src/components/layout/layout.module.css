@@ -23,6 +23,7 @@
 	top: 5px;
 	left: 5px;
 	transition: transform 0.3s ease-in-out;
+	z-index: 100;
 }
 
 .hamburger-icon-container svg > * {
