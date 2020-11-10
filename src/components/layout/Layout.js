@@ -13,7 +13,6 @@ export default function Layout({ children }) {
 			: `${styles.toggleMenu} ${styles.headerContainer}`
 	}`
 
-	console.log(menuIsOpen)
 	return (
 		<div className={styles.pageContainer}>
 			<div className={styles.hamburgerIconContainer}>
@@ -22,7 +21,13 @@ export default function Layout({ children }) {
 			<div className={headerStyles}>
 				<Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
 			</div>
-			<div className={styles.mainContainer}> {children} </div>
+			<div
+				className={styles.mainContainer}
+				onClick={() => setMenuIsOpen(false)}
+			>
+				{" "}
+				{children}{" "}
+			</div>
 			<div className={styles.footerContainer}>
 				<Footer />
 			</div>

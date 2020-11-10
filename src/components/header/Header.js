@@ -52,13 +52,13 @@ export default function Header(props) {
 				<Link to="/">{title}</Link>
 			</div>
 			<nav className={styles.headerNav}>
-				<a className={styles.navListLink} href="#home">
+				<a className={styles.navListLink} href="/#home">
 					Home
 				</a>
-				<a className={styles.navListLink} href="#feature">
+				<a className={styles.navListLink} href="/#feature">
 					Master's Project
 				</a>
-				<a className={styles.navListLink} href="#portfolio">
+				<a className={styles.navListLink} href="/#portfolio">
 					Portfolio
 				</a>
 			</nav>
