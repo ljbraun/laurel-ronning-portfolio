@@ -1,19 +1,21 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
+import SEO from "../components/seo/seo"
 import styles from "./portfolioentry.module.css"
 
 export default function PortfolioEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
-	const { slug, title, link } = frontmatter
+	// const { slug, title, link } = frontmatter
 	const image = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
 		<Layout>
+			<SEO title={frontmatter.title} />
 			<div className={styles.portfolioEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
 				<div className={styles.portfolioEntryContentContainer}>

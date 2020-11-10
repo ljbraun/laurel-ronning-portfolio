@@ -57,6 +57,11 @@ module.exports = {
 	],
 	siteMetadata: {
 		title: `Laurel Ronning`,
+		titleTemplate: `%s · Laurel Ronning`,
 		description: `International education`,
+		author: `Laurel Ronning`,
+		url: `https://www.laurelronning.netlify.app`, // No trailing slash allowed!
+		// image: `/assets/brand/logo.svg`, // Path to your image you placed in the 'static' folder
+		twitterUsername: `@braunecon`,
 	},
 }

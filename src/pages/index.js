@@ -2,12 +2,14 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import ProjectFeature from "../components/project-feature/ProjectFeature"
 import PortfolioSection from "../components/portfolio/PortfolioSection"
+import SEO from "../components/seo/seo"
 import "../styles/global.css"
 import styles from "./index.module.css"
 
 export default function Home() {
 	return (
 		<Layout>
+			<SEO title="Home" />
 			<div className={styles.frontpageContainer}>
 				<div className={styles.heroContainer} id="home">
 					<div className={styles.heroText}>
