@@ -48,12 +48,17 @@ collections:
       - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "markdown" }
       - { label: "Full description", name: "body", widget: "markdown" }
+      # - {
+      #     label: "Featured Image",
+      #     name: "featuredImage",
+      #     widget: "image",
+      #     required: false,
+      #     allow_multiple: false,
+      #   }
+      - { label: "Link", name: "link", widget: "string" }
       - {
           label: "Featured Image",
-          name: "featuredImage",
+          name: "images",
           widget: "image",
-          required: false,
-          allow_multiple: false,
+          required: true,
         }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Images", name: "images", widget: "image", required: false }
