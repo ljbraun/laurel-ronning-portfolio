@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Document, Page } from "react-pdf"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -34,9 +33,9 @@ export default function ProjectEntry({ data }) {
 							width="480"
 							height="360"
 							src="https://voicethread.com/app/player/?threadId=16029727"
-							frameborder="0"
-							allowusermedia
-							allowfullscreen
+							frameBorder="0"
+							allowusermedia={true}
+							allowFullScreen="true"
 							allow="camera https://voicethread.com; microphone https://voicethread.com; fullscreen https://voicethread.com;"
 						></iframe>
 					</div>
@@ -44,15 +43,6 @@ export default function ProjectEntry({ data }) {
 						className={styles.blogPostContent}
 						dangerouslySetInnerHTML={{ __html: html }}
 					/>
-
-					<div>
-						<Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-							<Page pageNumber={pageNumber} />
-						</Document>
-						<p>
-							Page {pageNumber} of {numPages}
-						</p>
-					</div>
 				</div>
 			</div>
 		</Layout>
