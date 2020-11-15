@@ -10,6 +10,9 @@ export default function Home() {
 	return (
 		<Layout>
 			<SEO title="Home" />
+			<Helmet>
+				<script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+			</Helmet>
 			<div className={styles.frontpageContainer}>
 				<div className={styles.heroContainer} id="home">
 					<div className={styles.heroText}>
