@@ -1,4 +1,5 @@
 import React from "react"
+import isFirefox from "react-device-detect"
 import Layout from "../components/layout/Layout"
 import ProjectFeature from "../components/project-feature/ProjectFeature"
 import PortfolioSection from "../components/portfolio/PortfolioSection"
