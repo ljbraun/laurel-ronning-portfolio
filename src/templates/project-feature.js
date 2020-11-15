@@ -5,9 +5,9 @@ import Img from "gatsby-image"
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo/seo"
-import styles from "./portfolioentry.module.css"
+import styles from "./projectfeature.module.css"
 
-export default function PortfolioEntry({ data }) {
+export default function ProjectEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
 	// const { slug, title, link } = frontmatter
@@ -16,9 +16,9 @@ export default function PortfolioEntry({ data }) {
 	return (
 		<Layout>
 			<SEO title={frontmatter.title} />
-			<div className={styles.portfolioEntryContainer}>
+			<div className={styles.projectEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
-				<div className={styles.portfolioEntryContentContainer}>
+				<div className={styles.projectEntryContentContainer}>
 					<div className={styles.entryImageContainer}>
 						{/* <Img className={styles.entryImage} fluid={image} /> */}
 						<iframe
