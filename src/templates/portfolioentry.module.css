@@ -20,6 +20,7 @@
 	justify-content: center;
 	width: 100%;
 }
+
 /* 
 .entry-image-container {
 	width: 35%;
@@ -33,9 +34,9 @@
 	border-radius: 1rem;
 } */
 
-/* .blog-post-content {
+.blog-post-content {
 	width: 60%;
-} */
+}
 
 @media (max-width: 800px) {
 	/* .entry-image-container {
