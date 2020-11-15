@@ -50,10 +50,6 @@ export default function PortfolioSection() {
 				<div className={styles.projectFeatureImageContainer}>
 					<Img fluid={image} />
 				</div>
-				<div
-					className={styles.projectFeatureDescription}
-					dangerouslySetInnerHTML={{ __html: html }}
-				></div>
 			</div>
 			<div className={styles.projectButton}>
 				<Link className={styles.filledButton} to={slug}>
