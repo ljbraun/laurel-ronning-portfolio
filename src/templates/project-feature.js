@@ -23,7 +23,7 @@ export default function ProjectEntry({ data }) {
 						{/* <Img className={styles.entryImage} fluid={image} /> */}
 						<iframe
 							width="480"
-							height="270"
+							height="360"
 							src="https://voicethread.com/app/player/?threadId=16029727"
 							frameborder="0"
 							allowusermedia
