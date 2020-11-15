@@ -35,7 +35,8 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
-    "react-markdown": "^5.0.2"
+    "react-markdown": "^5.0.2",
+    "react-pdf": "^5.0.0"
   },
   "devDependencies": {
     "prettier": "2.1.2"
