@@ -11,7 +11,7 @@ export default function PortfolioEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
 	// const { slug, title, link } = frontmatter
-	const featuredImage = markdownRemark.frontmatter.images.childImageSharp.fluid
+	// const featuredImage = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
 		<Layout>
@@ -19,9 +19,9 @@ export default function PortfolioEntry({ data }) {
 			<div className={styles.portfolioEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
 				<div className={styles.portfolioEntryContentContainer}>
-					<div className={styles.entryImageContainer}>
+					{/* <div className={styles.entryImageContainer}>
 						<Img className={styles.entryImage} fluid={featuredImage} />
-					</div>
+					</div> */}
 					<div
 						className={styles.blogPostContent}
 						dangerouslySetInnerHTML={{ __html: html }}

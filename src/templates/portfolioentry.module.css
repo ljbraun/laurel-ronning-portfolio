@@ -19,7 +19,7 @@
 	justify-content: space-between;
 	width: 100%;
 }
-
+/* 
 .entry-image-container {
 	width: 35%;
 	min-width: 10rem;
@@ -30,20 +30,20 @@
 
 .entry-image {
 	border-radius: 1rem;
-}
+} */
 
-.blog-post-content {
+/* .blog-post-content {
 	width: 60%;
-}
+} */
 
 @media (max-width: 800px) {
-	.entry-image-container {
+	/* .entry-image-container {
 		width: 70%;
 		margin: auto;
 	}
 	.gatsby-resp-image-wrapper {
 		text-align: center;
-	}
+	} */
 	.blog-post-content {
 		width: 100%;
 	}
