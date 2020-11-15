@@ -20,7 +20,16 @@ export default function PortfolioEntry({ data }) {
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
 				<div className={styles.portfolioEntryContentContainer}>
 					<div className={styles.entryImageContainer}>
-						<Img className={styles.entryImage} fluid={image} />
+						{/* <Img className={styles.entryImage} fluid={image} /> */}
+						<iframe
+							width="480"
+							height="270"
+							src="https://voicethread.com/app/player/?threadId=16029727"
+							frameborder="0"
+							allowusermedia
+							allowfullscreen
+							allow="camera https://voicethread.com; microphone https://voicethread.com; fullscreen https://voicethread.com;"
+						></iframe>
 					</div>
 					<div
 						className={styles.blogPostContent}

@@ -48,7 +48,16 @@ export default function PortfolioSection() {
 				</div>
 
 				<div className={styles.projectFeatureImageContainer}>
-					<Img fluid={image} />
+					{/* <Img fluid={image} /> */}
+					<iframe
+						width="480"
+						height="270"
+						src="https://voicethread.com/app/player/?threadId=16029727"
+						frameborder="0"
+						allowusermedia
+						allowfullscreen
+						allow="camera https://voicethread.com; microphone https://voicethread.com; fullscreen https://voicethread.com;"
+					></iframe>
 				</div>
 			</div>
 			<div className={styles.projectButton}>
