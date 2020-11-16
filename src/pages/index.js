@@ -17,7 +17,7 @@ export default function Home() {
 						<h2>Hey there! I'm Laurel.</h2>
 						<p>
 							I've been teaching around the world since 2015, and in 2020 I
-							complete my Master's in Eduction with a Focus on Teaching
+							completed my Master's in Eduction with a Focus on Teaching
 							Multilingual Learners. I'm passionate about student success!
 						</p>
 					</div>
