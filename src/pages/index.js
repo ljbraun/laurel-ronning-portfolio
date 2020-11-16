@@ -16,9 +16,9 @@ export default function Home() {
 					<div className={styles.heroText}>
 						<h2>Hey there! I'm Laurel.</h2>
 						<p>
-							I've been teaching around the world since 2015, and now I'm
-							studying for a masters in education. I'm passionate about student
-							success!
+							I've been teaching around the world since 2015, and in 2020 I
+							complete my Master's in Eduction with a Focus on Teaching
+							Multilingual Learners. I'm passionate about student success!
 						</p>
 					</div>
 				</div>
