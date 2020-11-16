@@ -8,4 +8,4 @@ summary: This project uses the principles of project-based learning to increase
 link: laurelronning.com
 images: pbl.jpg
 ---
-<iframe width="480" height="360" src="https://voicethread.com/app/player/?threadId=12791465" frameborder="0" allowusermedia allowfullscreen allow="camera https://voicethread.com; microphone https://voicethread.com; fullscreen https://voicethread.com;"></iframe>
+<iframe width="480" height="270" src="https://voicethread.com/app/player/?threadId=12791465" frameborder="0" allowusermedia allowfullscreen allow="camera https://voicethread.com; microphone https://voicethread.com; fullscreen https://voicethread.com;"></iframe>
