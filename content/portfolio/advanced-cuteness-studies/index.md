@@ -1,9 +1,10 @@
 ---
-title: Advanced Cuteness Studies
+title: Diversity & Inclusion in the Classroom
 slug: /portfolio/advanced-cuteness-studies
-summary: Studying cute animals
+summary: This infographic, created in collaboration with peers in Moreland
+  University's teaching certification programme, gives information on student
+  diversity and strategies for inclusion.
 link: https://www.goodnewsnetwork.org/study-finds-watching-cute-animals-is-good-for-your-health/
 images: catfolio-1.jpg
 ---
-
-Aww, animals are so cute!
+![](diversity-inclusion-in-the-classroom.png)
