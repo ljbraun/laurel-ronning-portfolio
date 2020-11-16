@@ -1,5 +1,5 @@
 ---
-slug: /portfolio/test
+slug: /portfolio/using-assessment-data
 date: 2020-10-10
 title: Using Assessment Data to Inform Instruction
 summary: This infographic shows an analysis of assessment data for a 1st-Grade
