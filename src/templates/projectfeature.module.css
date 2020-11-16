@@ -5,6 +5,8 @@
 	grid-template-areas:
 		"title slides"
 		"pdf pdf";
+	max-width: 100vw;
+	overflow: hidden;
 }
 .project-title {
 	grid-area: title;
@@ -48,16 +50,24 @@
 }
 
 @media (max-width: 800px) {
-	.entry-image-container {
-		display: flex;
-		max-width: 90%;
-		width: 90%;
-		margin: auto;
+	.project-feature-section-container {
+		margin-top: 10%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"title"
+			"slides"
+			"pdf";
+	}
+	.slides-container {
 	}
 	.gatsby-resp-image-wrapper {
 		text-align: center;
 	}
 	.blog-post-content {
 		width: 100%;
+	}
+	.pdf-wrapper iframe {
+		max-width: 95%;
 	}
 }

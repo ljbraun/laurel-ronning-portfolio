@@ -30,7 +30,7 @@ export default function ProjectEntry({ data }) {
 				<div className={styles.slidesContainer}>
 					{/* <Img className={styles.entryImage} fluid={image} /> */}
 					<iframe
-						width="480"
+						width="100%"
 						height="360"
 						src="https://voicethread.com/app/player/?threadId=16029727"
 						frameBorder="0"
