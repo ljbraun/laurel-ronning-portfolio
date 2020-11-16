@@ -1,29 +1,24 @@
-.project-entry-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	min-height: 87vh;
-	margin-top: 3rem;
-	padding: 1rem;
-	color: black;
+.project-feature-section-container {
+	margin-top: 8%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"title slides"
+		"pdf pdf";
 }
-
-.entry-title {
+.project-title {
+	grid-area: title;
+	display: flex;
+	align-items: center;
 	text-align: center;
 }
 
-.project-entry-content-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.slides-container {
+	grid-area: slides;
 	width: 100%;
-}
-
-.entry-image-container {
-	width: 35%;
 	min-width: 10rem;
 	max-width: 30rem;
+	margin: auto;
 	padding: 1rem;
 	justify-content: center;
 	z-index: 25;
@@ -35,6 +30,21 @@
 
 .blog-post-content {
 	width: 60%;
+}
+
+.pdf-wrapper {
+	grid-area: pdf;
+	grid-column: 1 / span 2;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.pdf-wrapper iframe {
+	display: block;
+	padding: 2rem;
+	border: 0;
+	max-width: 80%;
 }
 
 @media (max-width: 800px) {
