@@ -4,7 +4,7 @@ slug: /portfolio/top-10-principles
 summary: This infographic, created in collaboration with two classmates in the
   master's programme, details 10 principles for effective instruction in a
   non-native language.
-link: https://cats.com
 images: top-10.jpg
 ---
+
 ![](top-10-principles.png)

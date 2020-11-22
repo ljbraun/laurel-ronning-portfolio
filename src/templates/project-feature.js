@@ -12,7 +12,6 @@ export default function ProjectEntry({ data }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
 	// const { slug, title, link } = frontmatter
-	const image = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
 		<Layout>
