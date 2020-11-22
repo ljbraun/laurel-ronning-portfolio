@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -9,13 +9,6 @@ import styles from "./projectfeature.module.css"
 import pdf from "../../content/sections/123/peer-relationships-in-the-classroom-laurel-ronning.pdf"
 
 export default function ProjectEntry({ data }) {
-	const [numPages, setNumPages] = useState(null)
-	const [pageNumber, setPageNumber] = useState(1)
-
-	function onDocumentLoadSuccess({ numPages }) {
-		setNumPages(numPages)
-	}
-
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
 	// const { slug, title, link } = frontmatter
