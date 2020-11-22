@@ -63,6 +63,8 @@ export default function PortfolioSection() {
 
 		if (item.node.frontmatter.images.childImageSharp.fluid) {
 			image = item.node.frontmatter.images.childImageSharp.fluid
+		} else {
+			console.log(`Error! ${item.node.frontmatter.title}`)
 		}
 
 		return (
