@@ -14,10 +14,8 @@ summary: >-
   2. What instructional strategies are effective for fostering peer relationships for K-12
 
   ELL students in an online setting?
-featuredImage: aug-16-psst-its-camping-time-nocal-1920x1080.png
 link: https://laurelronning.com
 slug: /sections/featured-project/
-images: aug-16-psst-its-camping-time-nocal-1920x1080.png
 ---
 
 .

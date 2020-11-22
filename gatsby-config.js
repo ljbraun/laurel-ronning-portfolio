@@ -46,6 +46,13 @@ module.exports = {
 				path: `${__dirname}/content/sections`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `global-images`,
+				path: `${__dirname}/src/images`,
+			},
+		},
 		`gatsby-transformer-json`,
 		{
 			resolve: `gatsby-source-filesystem`,

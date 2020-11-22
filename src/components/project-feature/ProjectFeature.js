@@ -18,13 +18,6 @@ export default function PortfolioSection() {
 							summary
 							link
 							date
-							featuredImage {
-								childImageSharp {
-									fluid {
-										...GatsbyImageSharpFluid
-									}
-								}
-							}
 						}
 						html
 					}
@@ -35,8 +28,7 @@ export default function PortfolioSection() {
 
 	const { frontmatter, html } = queryFeature.allMarkdownRemark.edges[0].node
 
-	const { slug, title, link, featuredImage, summary } = frontmatter
-	const image = featuredImage.childImageSharp.fluid
+	const { slug, title, link, summary } = frontmatter
 
 	return (
 		<div className={styles.projectFeatureSectionContainer}>

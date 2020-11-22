@@ -39,6 +39,18 @@ export default function PortfolioSection() {
 						}
 					}
 				}
+				imageSharp(fluid: { originalName: { eq: "placeholder.jpg" } }) {
+					id
+					fluid {
+						base64
+						tracedSVG
+						srcWebp
+						srcSetWebp
+						originalImg
+						originalName
+						...GatsbyImageSharpFluid
+					}
+				}
 			}
 		`
 	)
@@ -47,7 +59,11 @@ export default function PortfolioSection() {
 	const portfolioItems = items.map(item => {
 		const { title, summary, link, slug } = item.node.frontmatter
 		const { html, id } = item.node
-		const image = item.node.frontmatter.images.childImageSharp.fluid
+		let image = data.imageSharp.fluid
+
+		if (item.node.frontmatter.images.childImageSharp.fluid) {
+			image = item.node.frontmatter.images.childImageSharp.fluid
+		}
 
 		return (
 			<PortfolioItem
