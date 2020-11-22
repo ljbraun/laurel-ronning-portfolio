@@ -10,7 +10,7 @@ export default function PortfolioSection(props) {
 	return (
 		<div className={styles.portfolioItem}>
 			<ConditionalWrapper
-				condition={link}
+				condition={!link}
 				wrapper={children => <Link to={slug}>{children}</Link>}
 				altWrapper={children => <a href={link}>{children}</a>}
 			>
