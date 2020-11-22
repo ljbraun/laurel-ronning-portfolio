@@ -61,11 +61,11 @@ export default function PortfolioSection() {
 		const { html, id } = item.node
 		let image = data.imageSharp.fluid
 
-		if (item.node.frontmatter.images.childImageSharp.fluid) {
-			image = item.node.frontmatter.images.childImageSharp.fluid
-		} else {
-			console.log(`Error! ${item.node.frontmatter.title}`)
-		}
+		// if (item.node.frontmatter.images.childImageSharp.fluid) {
+		// 	image = item.node.frontmatter.images.childImageSharp.fluid
+		// } else {
+		// 	console.log(`Error! ${item.node.frontmatter.title}`)
+		// }
 
 		return (
 			<PortfolioItem
