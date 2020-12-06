@@ -6,5 +6,4 @@ summary: This infographic,created in collaboration with two classmates in
   non-native language.
 images: top-10.jpg
 ---
-
-![Top 10 Principles Infographic](top-10.jpg "top-10-principles-infographic")
+![Top 10 Principles Infographic](top-10.png "top-10-principles-infographic")
