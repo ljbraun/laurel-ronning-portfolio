@@ -7,7 +7,7 @@
 	min-height: 87vh;
 	margin-top: 3rem;
 	padding: 1rem;
-	color: black;
+	color: var(--main-text);
 }
 
 .entry-title {

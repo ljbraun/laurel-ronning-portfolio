@@ -39,14 +39,14 @@
 	display: flex;
 	flex: 1 0 100%;
 	width: 100%;
-	background: var(--dark-2);
+	background: var(--bg-2);
 }
 
 .footer-container {
 	flex-shrink: 0;
 	width: 100%;
 	margin-top: auto;
-	background: var(--dark-1);
+	background: var(--bg-1);
 }
 
 @media (max-width: 600px) {

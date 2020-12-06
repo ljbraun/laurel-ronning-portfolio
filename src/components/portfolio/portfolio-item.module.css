@@ -10,7 +10,8 @@
 
 	margin: 1.2vw;
 	border-radius: 1rem;
-	background: var(--dark-1);
+	background: var(--bg-1);
+	color: var(--main-text);
 	text-align: center;
 	transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
 	z-index: 50;
@@ -23,8 +24,8 @@
 
 .portfolio-item:hover,
 .portfolio-item a:hover {
-	background: var(--mid-1);
-	color: white;
+	background: var(--accent-1);
+	color: var(--main-text);
 	opacity: 0.9;
 }
 
@@ -42,6 +43,7 @@
 }
 
 .item-summary {
+	color: var(--main-text);
 	text-align: center;
 	font-size: 0.9rem;
 }
