@@ -8,24 +8,12 @@
 	--bg-3: hsla(153, 38%, 40%, 1);
 	--main-link: hsla(153, 38%, 40%, 1);
 	--main-link-hover: hsl(193, 25%, 78%);
-	--button-1: hsl(152, 91%, 48%);
-	--button-1-text: black;
+	--button-1: hsla(153, 38%, 40%, 1);
+	--button-1-text: white;
 	--accent-1: hsl(236, 56%, 58%);
 	--accent-2: hsl(152, 91%, 48%);
-	/* 
-	--mid-1: hsl(236, 56%, 58%);
-	--mid-2: hsl(197, 28%, 95%);
-	--mid-3: hsl(152, 91%, 48%);
-	--dark-1: hsl(193, 25%, 78%);
-	--dark-2: hsla(153, 38%, 40%, 1);
-	--dark-3: hsl(238, 55%, 51%); */
+	--accent-3: hsla(153, 38%, 40%, 1);
 }
-
-#EFF4F6 #BAD0D6
-
-/* --illuminating-emerald: hsla(153, 38%, 40%, 1);
---beaver: hsla(22, 18%, 56%, 1);
---antique-white: hsla(30, 100%, 93%, 1); */
 
 html {
 	box-sizing: border-box;

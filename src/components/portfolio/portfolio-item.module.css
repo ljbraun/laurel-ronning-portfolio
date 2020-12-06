@@ -24,12 +24,15 @@
 
 .portfolio-item:hover,
 .portfolio-item a:hover {
-	background: var(--accent-1);
+	background: var(--accent-3);
 	color: var(--main-text);
 	opacity: 0.9;
 }
 
 .portfolio-item a {
+	display: block;
+	width: 100%;
+	height: 100%;
 	border-radius: 1rem;
 }
 
