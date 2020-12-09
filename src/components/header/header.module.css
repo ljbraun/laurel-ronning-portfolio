@@ -5,7 +5,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 2rem;
-	min-height: 0;
+
 	max-height: 100%;
 	transition: background-color 0.3s ease-in-out;
 	z-index: 100;
@@ -24,6 +24,10 @@
 .close-icon-container:hover {
 	cursor: pointer;
 	transform: scale(1.1);
+}
+
+.close-icon-container svg {
+	stroke: blue;
 }
 
 .close-icon-container svg > * {
@@ -70,11 +74,12 @@
 @media (max-width: 600px) {
 	.close-icon-container {
 		display: block;
+		color: var(--contrast-text);
 	}
 	.main-header {
 		align-items: flex-start;
-		flex-direction: column;
 		padding: 0;
+		overflow-y: auto;
 	}
 	.title-container {
 		align-self: center;

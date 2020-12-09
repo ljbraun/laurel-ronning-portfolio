@@ -16,6 +16,7 @@
 	transition: transform 0.3s ease-in-out;
 }
 
+/* Mobile mene styles */
 .hamburger-icon-container {
 	display: none;
 	position: fixed;
@@ -24,6 +25,7 @@
 	left: 5px;
 	transition: transform 0.3s ease-in-out;
 	z-index: 100;
+	color: var(--accent-1);
 }
 
 .hamburger-icon-container svg > * {
@@ -59,6 +61,6 @@
 		display: block;
 	}
 	.toggle-menu {
-		transform: translateX(-100%);
+		transform: translateX(-1000px);
 	}
 }
