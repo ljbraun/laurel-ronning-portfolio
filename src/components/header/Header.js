@@ -24,6 +24,10 @@ export default function Header(props) {
 
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
+
+		if (props.pagePath && props.pagePath.includes("portfolio")) {
+			setHeaderBackground("hsla(0, 0%, 0%, 0.7)")
+		}
 	})
 
 	const data = useStaticQuery(

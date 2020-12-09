@@ -4,9 +4,8 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 2rem;
+	padding: 1rem;
 
-	max-height: 100%;
 	transition: background-color 0.3s ease-in-out;
 	z-index: 100;
 }

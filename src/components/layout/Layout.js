@@ -4,7 +4,7 @@ import Header from "../../components/header/Header"
 import Footer from "../../components/footer/Footer"
 import styles from "./layout.module.css"
 
-export default function Layout({ children }) {
+export default function Layout({ children, pagePath }) {
 	const [menuIsOpen, setMenuIsOpen] = useState(false)
 
 	const headerStyles = `${
@@ -19,7 +19,11 @@ export default function Layout({ children }) {
 				<HamburgerIcon onClick={() => setMenuIsOpen(!menuIsOpen)} />
 			</div>
 			<div className={headerStyles}>
-				<Header menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+				<Header
+					menuIsOpen={menuIsOpen}
+					setMenuIsOpen={setMenuIsOpen}
+					pagePath={pagePath}
+				/>
 			</div>
 			<div
 				className={styles.mainContainer}

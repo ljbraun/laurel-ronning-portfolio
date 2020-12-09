@@ -34,9 +34,8 @@
 	border-radius: 1rem;
 } */
 
-.blog-post-content {
-	width: 60%;
-}
+/* .blog-post-content {
+} */
 
 @media (max-width: 800px) {
 	/* .entry-image-container {

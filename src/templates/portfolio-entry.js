@@ -7,14 +7,17 @@ import Layout from "../components/layout/Layout"
 import SEO from "../components/seo/seo"
 import styles from "./portfolioentry.module.css"
 
-export default function PortfolioEntry({ data }) {
+export default function PortfolioEntry({ data, location }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
+
+	const path = location ? location.pathname : "null"
+	console.log(path)
 	// const { slug, title, link } = frontmatter
 	// const featuredImage = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
-		<Layout>
+		<Layout pagePath={path}>
 			<SEO title={frontmatter.title} />
 			<div className={styles.portfolioEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
