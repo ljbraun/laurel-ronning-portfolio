@@ -27,6 +27,8 @@ export default function Header(props) {
 
 		if (props.pagePath && props.pagePath.includes("portfolio")) {
 			setHeaderBackground("hsla(0, 0%, 0%, 0.7)")
+		} else {
+			window.addEventListener("scroll", handleScroll)
 		}
 	})
 
