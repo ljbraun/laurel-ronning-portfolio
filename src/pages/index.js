@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import isFirefox from "react-device-detect"
 import Layout from "../components/layout/Layout"
 import ProjectFeature from "../components/project-feature/ProjectFeature"
@@ -7,7 +9,9 @@ import SEO from "../components/seo/seo"
 import "../styles/global.css"
 import styles from "./index.module.css"
 
-export default function Home() {
+export default function Home({ data }) {
+	console.log(data.file.childImageSharp.fluid)
+	const profileImage = data.file.childImageSharp.fluid
 	return (
 		<Layout>
 			<SEO title="Home" />
@@ -21,6 +25,13 @@ export default function Home() {
 							Multilingual Learners. I'm passionate about student success!
 						</p>
 					</div>
+					<div className={styles.indexProfileImageContainer}>
+						<Img
+							className={styles.indexProfileImage}
+							fluid={profileImage}
+							alt="Laurel Ronning's profile photo"
+						/>
+					</div>
 				</div>
 				<div className={styles.featureContainer} id="feature">
 					<ProjectFeature />
@@ -32,3 +43,16 @@ export default function Home() {
 		</Layout>
 	)
 }
+
+export const data = graphql`
+	query IndexQuery {
+		file(relativePath: { eq: "index/laurel-profile-photo.jpg" }) {
+			id
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+	}
+`

@@ -45,7 +45,10 @@
 	padding: 1rem;
 	width: 100%;
 	height: 100%;
-	color: var(--accent-2);
+	color: var(--contrast-text);
+	font-family: "Bad Script";
+	font-size: 2rem;
+	font-weight: 800;
 }
 
 .title-container:hover,
@@ -60,14 +63,22 @@
 
 .nav-list-link {
 	border-radius: 10%;
+	margin: 0.2rem;
 	padding: 1rem;
 	font-size: 1.1rem;
 	color: var(--contrast-text);
+	font-weight: 600;
+	font-size: 1.2rem;
+	background: var(--transparent-black);
+	transition: background 0.3s ease-in-out, font-size 0.3s ease-in-out,
+		color 0.3s ease-in-out;
 }
 
 .nav-list-link:hover,
 .nav-list-link:focus {
-	background: hsla(0, 0%, 0%, 0.5);
+	background: var(--accent-3-transparent);
+	color: var(--contrast-text);
+	font-size: 1.3rem;
 }
 
 @media (max-width: 600px) {
