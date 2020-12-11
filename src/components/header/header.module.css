@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 1rem;
+	padding: 0.2rem 3rem;
 
 	transition: background-color 0.3s ease-in-out;
 	z-index: 100;
@@ -53,8 +53,8 @@
 
 .title-container:hover,
 .title-container a:hover {
-	background: hsla(0, 0%, 0%, 0.5);
-	transform: scale(1.05);
+	transform: scale(1.05) skewX(-5deg);
+	color: var(--accent-2);
 }
 
 .title-container a:hover {

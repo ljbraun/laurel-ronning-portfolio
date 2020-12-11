@@ -15,7 +15,7 @@
 	--accent-2: hsl(152, 91%, 48%);
 	--accent-3: hsla(153, 38%, 40%, 1);
 	--accent-3-transparent: hsla(153, 38%, 40%, 0.7);
-	--transparent-black: hsla(0, 0%, 0%, 0.5);
+	--transparent-black: hsla(0, 0%, 0%, 0.7);
 }
 
 html {
