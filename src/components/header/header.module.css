@@ -8,6 +8,7 @@
 
 	transition: background-color 0.3s ease-in-out;
 	z-index: 100;
+	overflow: hidden;
 }
 
 .close-icon-container {
@@ -81,6 +82,24 @@
 	font-size: 1.3rem;
 }
 
+@media (max-width: 800px) {
+	.title-container a {
+		font-size: 1.5rem;
+	}
+	.nav-list-link {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.title-container a {
+		font-size: 1.3rem;
+	}
+	.nav-list-link {
+		font-size: 0.9rem;
+	}
+}
+
 @media (max-width: 600px) {
 	.close-icon-container {
 		display: block;
@@ -93,8 +112,10 @@
 	}
 	.title-container {
 		align-self: center;
+		text-align: center;
 		margin: 2rem 0 0 2rem;
 		font-size: 2rem;
+		width: 80%;
 	}
 	.header-nav {
 		flex-direction: column;

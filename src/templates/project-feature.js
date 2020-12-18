@@ -8,13 +8,14 @@ import SEO from "../components/seo/seo"
 import styles from "./projectfeature.module.css"
 import pdf from "../../content/sections/123/peer-relationships-in-the-classroom-laurel-ronning.pdf"
 
-export default function ProjectEntry({ data }) {
+export default function ProjectEntry({ data, location }) {
 	const { markdownRemark } = data
 	const { frontmatter, html } = markdownRemark
-	// const { slug, title, link } = frontmatter
+
+	const path = location ? location.pathname : "null"
 
 	return (
-		<Layout>
+		<Layout pagePath={path}>
 			<SEO title={frontmatter.title} />
 			<div className={styles.projectFeatureSectionContainer}>
 				<h1 className={styles.projectTitle}>{frontmatter.title}</h1>

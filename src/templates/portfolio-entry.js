@@ -12,9 +12,6 @@ export default function PortfolioEntry({ data, location }) {
 	const { frontmatter, html } = markdownRemark
 
 	const path = location ? location.pathname : "null"
-	console.log(path)
-	// const { slug, title, link } = frontmatter
-	// const featuredImage = markdownRemark.frontmatter.images.childImageSharp.fluid
 
 	return (
 		<Layout pagePath={path}>
@@ -22,9 +19,6 @@ export default function PortfolioEntry({ data, location }) {
 			<div className={styles.portfolioEntryContainer}>
 				<h1 className={styles.entryTitle}>{frontmatter.title}</h1>
 				<div className={styles.portfolioEntryContentContainer}>
-					{/* <div className={styles.entryImageContainer}>
-						<Img className={styles.entryImage} fluid={featuredImage} />
-					</div> */}
 					<div
 						className={styles.blogPostContent}
 						dangerouslySetInnerHTML={{ __html: html }}

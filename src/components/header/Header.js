@@ -25,7 +25,10 @@ export default function Header(props) {
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 
-		if (props.pagePath && props.pagePath.includes("portfolio")) {
+		if (
+			props.pagePath &&
+			["portfolio", "section"].some(path => props.pagePath.includes(path))
+		) {
 			setHeaderBackground("hsla(0, 0%, 0%, 0.7)")
 		} else {
 			window.addEventListener("scroll", handleScroll)
