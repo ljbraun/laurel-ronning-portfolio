@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
 import ReactMarkdown from "react-markdown"
 import styles from "./projectfeature.module.css"
 
@@ -26,9 +25,9 @@ export default function PortfolioSection() {
 		}
 	`)
 
-	const { frontmatter, html } = queryFeature.allMarkdownRemark.edges[0].node
+	const { frontmatter } = queryFeature.allMarkdownRemark.edges[0].node
 
-	const { slug, title, link, summary } = frontmatter
+	const { slug, title, summary } = frontmatter
 
 	return (
 		<div className={styles.projectFeatureSectionContainer}>
@@ -44,6 +43,7 @@ export default function PortfolioSection() {
 					<iframe
 						width="480"
 						height="360"
+						title="Voicethread"
 						src="https://voicethread.com/app/player/?threadId=16029727"
 						frameborder="0"
 						allowusermedia

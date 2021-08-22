@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
 import "../styles/global.css"
 import Layout from "../components/layout/Layout"
@@ -25,6 +24,7 @@ export default function ProjectEntry({ data, location }) {
 					<iframe
 						width="100%"
 						height="360"
+						title="Voicethread"
 						src="https://voicethread.com/app/player/?threadId=16029727"
 						frameBorder="0"
 						allowusermedia={true}

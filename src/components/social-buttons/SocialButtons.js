@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import {
-	SiFacebook as FacebookIcon,
 	SiTwitter as TwitterIcon,
 	SiLinkedin as LinkedInIcon,
 } from "react-icons/si"

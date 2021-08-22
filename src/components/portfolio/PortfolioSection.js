@@ -58,7 +58,7 @@ export default function PortfolioSection() {
 
 	const portfolioItems = items.map(item => {
 		const { title, summary, link, slug } = item.node.frontmatter
-		const { html, id } = item.node
+		const { id } = item.node
 		let image = data.imageSharp.fluid
 
 		if (item.node.frontmatter.images.childImageSharp.fluid) {

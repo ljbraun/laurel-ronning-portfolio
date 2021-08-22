@@ -6,7 +6,7 @@ import styles from "./header.module.css"
 
 export default function Header(props) {
 	const [headerBackground, setHeaderBackground] = useState("transparent")
-	const { menuIsOpen, setMenuIsOpen } = props
+	const { setMenuIsOpen } = props
 
 	const debouncedHeaderBackground = useCallback(
 		debounce(
@@ -18,13 +18,11 @@ export default function Header(props) {
 		)
 	)
 
-	const handleScroll = () => {
+	const handleScroll = useCallback(() => {
 		debouncedHeaderBackground()
-	}
+	}, [debouncedHeaderBackground])
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll)
-
 		if (
 			props.pagePath &&
 			["portfolio", "section"].some(path => props.pagePath.includes(path))
@@ -33,7 +31,7 @@ export default function Header(props) {
 		} else {
 			window.addEventListener("scroll", handleScroll)
 		}
-	})
+	}, [handleScroll, props.pagePath])
 
 	const data = useStaticQuery(
 		graphql`

@@ -28,9 +28,10 @@ export default function Layout({ children, pagePath }) {
 			<div
 				className={styles.mainContainer}
 				onClick={() => setMenuIsOpen(false)}
+				onKeyDown={event => (event.key === "Esc" ? setMenuIsOpen(false) : "")}
+				role="main"
 			>
-				{" "}
-				{children}{" "}
+				{children}
 			</div>
 			<div className={styles.footerContainer}>
 				<Footer />
