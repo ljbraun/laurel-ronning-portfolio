@@ -61,6 +61,7 @@ module.exports = {
 				path: `${__dirname}/src/data`,
 			},
 		},
+		`gatsby-plugin-react-helmet`,
 	],
 	siteMetadata: {
 		title: `Laurel Ronning`,
@@ -72,3 +73,7 @@ module.exports = {
 		twitterUsername: `@braunecon`,
 	},
 }
+
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
